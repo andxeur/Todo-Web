@@ -5,6 +5,25 @@
     
 }
 
+body{
+    font-family: cursive;
+}
+
+input[type="text"] {
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="search"] {
+    outline: none;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    
+}
+
 header{
     height: 625px;
     background-color: aquamarine;
@@ -45,7 +64,7 @@ nav{
 .header_bottom_centre_contain_menu{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
     margin-top: 10px;
     border-radius: 25px;
     height:80%;
@@ -67,8 +86,67 @@ nav{
     width: 70%;
     background-color: rgb(182, 8, 8);
 }
+
+.header_bottom_centre_contain_menu_gauche_ajuste{
+    height:100%;
+    width: 100%;
+    background-color: rgb(106, 0, 55);
+}
+
 .header_bottom_centre_contain_menu_gauche p{
     color: rgb(186, 186, 186);
+}
+
+.header_bottom_centre_contain_menu_gauche h3{
+    font-weight: bolder;
+}
+
+.header_bottom_centre_contain_menu_gauche_form{
+    margin-top: 10px;
+    height:20%;
+    background-color: rgb(247, 8, 84);
+}
+
+.header_bottom_centre_contain_menu_gauche form{
+    display: flex;
+    justify-content: space-between;
+    height:100%;
+    background-color: rgb(8, 182, 95);
+}
+
+.header_bottom_centre_contain_menu_gauche_form_div{
+    height:100%;
+    background-color: rgb(2, 80, 43);
+}
+
+.header_bottom_centre_contain_menu_gauche_form_div input{
+    height:100%;
+}
+
+
+.header_bottom_centre_contain_menu_gauche_form2{
+    display: flex;
+    margin-top: 17px;
+    height:35%;
+    background-color: rgb(255, 255, 8);
+}
+
+.header_bottom_centre_contain_menu_gauche_form2 textarea{
+    outline: none;
+    height:100%;
+    width: 85%;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+
+    overflow: hidden;
+}
+
+.header_bottom_centre_contain_menu_gauche_form2 input[type="submit"]{
+    height:100%;
+    width: 15%;
 }
 
 .header_bottom_centre_contain_menu_droite{
@@ -112,8 +190,6 @@ nav{
 .header_bottom_centre_bottom_recherche input{
     height: 75%;
     width: 40%;
-    outline: none;
-    padding-left: 15px;
     border-radius: 25px;
     border: none;
     background-color: rgb(227, 227, 224);
