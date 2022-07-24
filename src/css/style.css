@@ -1,4 +1,126 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+}
+
+header{
+    height: 625px;
+    background-color: aquamarine;
+}
+
+nav{
+    height: 8%;
+    background-color: rgb(45, 54, 51);
+}
+
+.header_bottom{
+    display: flex;
+    height: 92%;
+    background-color: rgb(38, 31, 228);
+}
+
+.header_bottom_gauche{
+    height: 100%;
+    width: 15%;
+    background-color: rgb(107, 228, 31);
+}
+
+.header_bottom_centre{
+    height: 100%;
+    width: 55%;
+    background-color: rgb(87, 31, 228);
+}
+
+.header_bottom_centre_contain{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 45%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.header_bottom_centre_contain_menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 25px;
+    height:80%;
+    width: 95%;
+    background-color: rgb(0, 0, 0);
+}
+
+.header_bottom_centre_contain_menu_ajuste{
+    display: flex;
+    height:80%;
+    width: 90%;
+    background-color: rgb(43, 8, 182);
+}
+
+.header_bottom_centre_contain_menu_gauche{
+    color: beige;
+    font-weight: bolder;
+    height:100%;
+    width: 70%;
+    background-color: rgb(182, 8, 8);
+}
+.header_bottom_centre_contain_menu_gauche p{
+    color: rgb(186, 186, 186);
+}
+
+.header_bottom_centre_contain_menu_droite{
+    height:100%;
+    width: 30%;
+    background-size: cover;
+    background-image:url("/src/img/woman_standing_with_penci.png");
+    background-color: rgb(8, 182, 43);
+    background-position: center;
+}
+
+.header_bottom_centre_contain_menu_droite img{
+    height:100%;
+    width: 100%;
+    
+}
+
+.header_bottom_centre_bottom{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 55%;
+    width: 100%;
+    background-color: rgb(250, 16, 16);
+}
+
+.header_bottom_centre_bottom_centrer{
+    height: 100%;
+    width: 95%;
+    background-color: rgb(144, 141, 141);
+}
+
+.header_bottom_centre_bottom_recherche{
+    display: flex;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: rgb(217, 232, 1);
+}
+
+.header_bottom_centre_bottom_recherche input{
+    height: 75%;
+    width: 40%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(227, 227, 224);
+}
+
+.header_bottom_droit{
+    height: 100%;
+    width: 30%;
+    background-color: rgb(228, 100, 31);
 }
