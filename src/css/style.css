@@ -229,7 +229,52 @@ nav{
 }
 
 .header_bottom_droit{
+    display: flex;
+    align-items: center;
+    justify-content:center;
     height: 100%;
     width: 30%;
     background-color: #373737;
+}
+
+
+.header_bottom_droit_centre{
+    margin-top: 70px;
+    text-align: center;
+    align-items: center;
+    height: 60%;
+    width: 80%;
+    /* background-color: #16a33c; */
+}
+
+.header_bottom_droit_centre_text{
+    color: white;
+    font-size: 0.9rem;
+    height: 30%;
+    width: 100%;
+    /* background-color: #5f0eeb; */
+}
+
+.header_bottom_droit_centre_text p{
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.header_bottom_droit_centre_text input{
+    background-color: #16a33c;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    height: 30%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header_bottom_droit_centre_image{
+    height: 70%;
+    width: 100%;
+    /* background-color: #ffff09; */
+    background-size: cover;
+    background-image:url("/src/img/woman_sitting_with_tablet.png");
+    background-position: center;
 }
