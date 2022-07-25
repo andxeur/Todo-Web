@@ -7,6 +7,7 @@
 
 body{
     font-family: cursive;
+    background-color: #2C2C2C;
 }
 
 input[type="text"] {
@@ -26,30 +27,30 @@ input[type="search"] {
 
 header{
     height: 625px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 nav{
     height: 8%;
-    background-color: rgb(45, 54, 51);
+    background-color: #2C2C2C;
 }
 
 .header_bottom{
     display: flex;
     height: 92%;
-    background-color: rgb(38, 31, 228);
+    /* background-color: rgb(38, 31, 228); */
 }
 
 .header_bottom_gauche{
     height: 100%;
     width: 15%;
-    background-color: rgb(107, 228, 31);
+    background-color: #F2F2F2;
 }
 
 .header_bottom_centre{
     height: 100%;
     width: 55%;
-    background-color: rgb(87, 31, 228);
+    /* background-color: rgb(87, 31, 228); */
 }
 
 .header_bottom_centre_contain{
@@ -58,7 +59,7 @@ nav{
     flex-direction: column;
     height: 45%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
 }
 
 .header_bottom_centre_contain_menu{
@@ -76,7 +77,7 @@ nav{
     display: flex;
     height:80%;
     width: 90%;
-    background-color: rgb(43, 8, 182);
+    /* background-color: rgb(43, 8, 182); */
 }
 
 .header_bottom_centre_contain_menu_gauche{
@@ -84,13 +85,13 @@ nav{
     font-weight: bolder;
     height:100%;
     width: 70%;
-    background-color: rgb(182, 8, 8);
+    /* background-color: rgb(182, 8, 8); */
 }
 
 .header_bottom_centre_contain_menu_gauche_ajuste{
     height:100%;
     width: 100%;
-    background-color: rgb(106, 0, 55);
+    /* background-color: rgb(106, 0, 55); */
 }
 
 .header_bottom_centre_contain_menu_gauche p{
@@ -104,44 +105,76 @@ nav{
 .header_bottom_centre_contain_menu_gauche_form{
     margin-top: 10px;
     height:20%;
-    background-color: rgb(247, 8, 84);
+    /* background-color: rgb(247, 8, 84); */
 }
 
 .header_bottom_centre_contain_menu_gauche form{
     display: flex;
     justify-content: space-between;
     height:100%;
-    background-color: rgb(8, 182, 95);
+    width:100%;
+    /* background-color: rgb(247, 4, 190); */
 }
 
 .header_bottom_centre_contain_menu_gauche_form_div{
+    border-radius: 5px;
+    display: flex;
     height:100%;
-    background-color: rgb(2, 80, 43);
+    width:40%;
+    background-color: rgb(9, 149, 84);
 }
 
 .header_bottom_centre_contain_menu_gauche_form_div input{
+    border-radius: 5px 0px 0px 5px;
     height:100%;
+    width:75%;
+   
+}
+
+.header_bottom_centre_contain_menu_gauche_form form > input{
+    /* background-color: rgb(255, 166, 0); */
+    width:50%;
+}
+
+.icon_Categorie{
+    border-radius: 0px 5px 5px 0px;
+    background: url("/src/img/icon/expand_arrow_26px.png") no-repeat;
+    background-size: auto;
+    background-position: center;
+    width:25%;
+    height:100%;
+    background-color: rgb(205, 205, 205);
 }
 
 
 .header_bottom_centre_contain_menu_gauche_form2{
     display: flex;
     margin-top: 17px;
-    height:35%;
-    background-color: rgb(255, 255, 8);
+    height:25%;
+    /* background-color: rgb(255, 255, 8); */
 }
 
 .header_bottom_centre_contain_menu_gauche_form2 textarea{
     outline: none;
     height:100%;
-    width: 85%;
+    width: 90%;
     resize: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
     padding-top: 5px;
     padding-left: 5px;
 
-    overflow: hidden;
+    overflow: auto;
+}
+
+.header_bottom_centre_contain_menu_gauche_form2 .icon_add{
+    border-radius: 0px 5px 5px 0px;
+    background: url("/src/img/icon/plus_math_30px.png") no-repeat;
+    background-size: auto;
+    background-position: center;
+    width:10%;
+    height:100%;
+    background-color: rgb(205, 205, 205);
 }
 
 .header_bottom_centre_contain_menu_gauche_form2 input[type="submit"]{
@@ -154,7 +187,7 @@ nav{
     width: 30%;
     background-size: cover;
     background-image:url("/src/img/woman_standing_with_penci.png");
-    background-color: rgb(8, 182, 43);
+    /* background-color: rgb(8, 182, 43); */
     background-position: center;
 }
 
@@ -170,13 +203,13 @@ nav{
     flex-direction: column;
     height: 55%;
     width: 100%;
-    background-color: rgb(250, 16, 16);
+    /* background-color: rgb(250, 16, 16); */
 }
 
 .header_bottom_centre_bottom_centrer{
     height: 100%;
     width: 95%;
-    background-color: rgb(144, 141, 141);
+    /* background-color: rgb(144, 141, 141); */
 }
 
 .header_bottom_centre_bottom_recherche{
@@ -184,7 +217,7 @@ nav{
     align-items: center;
     height: 15%;
     width: 100%;
-    background-color: rgb(217, 232, 1);
+    /* background-color: rgb(217, 232, 1); */
 }
 
 .header_bottom_centre_bottom_recherche input{
@@ -198,5 +231,5 @@ nav{
 .header_bottom_droit{
     height: 100%;
     width: 30%;
-    background-color: rgb(228, 100, 31);
+    background-color: #373737;
 }
