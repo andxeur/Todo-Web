@@ -41,16 +41,20 @@ nav{
     /* background-color: rgb(38, 31, 228); */
 }
 
+/* ___________ menu coter gauche _______________ */
+
 .header_bottom_gauche{
     height: 100%;
     width: 15%;
     background-color: #F2F2F2;
 }
 
+/* ___________ menu coter centre _______________ */
+
 .header_bottom_centre{
     height: 100%;
     width: 55%;
-    /* background-color: rgb(87, 31, 228); */
+    background-color: rgb(87, 31, 228);
 }
 
 .header_bottom_centre_contain{
@@ -59,7 +63,7 @@ nav{
     flex-direction: column;
     height: 45%;
     width: 100%;
-    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(255, 255, 255);
 }
 
 .header_bottom_centre_contain_menu{
@@ -203,13 +207,13 @@ nav{
     flex-direction: column;
     height: 55%;
     width: 100%;
-    /* background-color: rgb(250, 16, 16); */
+    background-color: rgb(250, 16, 16);
 }
 
 .header_bottom_centre_bottom_centrer{
     height: 100%;
     width: 95%;
-    /* background-color: rgb(144, 141, 141); */
+    background-color: rgb(144, 141, 141);
 }
 
 .header_bottom_centre_bottom_recherche{
@@ -217,7 +221,7 @@ nav{
     align-items: center;
     height: 15%;
     width: 100%;
-    /* background-color: rgb(217, 232, 1); */
+    background-color: rgb(217, 232, 1);
 }
 
 .header_bottom_centre_bottom_recherche input{
@@ -227,6 +231,79 @@ nav{
     border: none;
     background-color: rgb(227, 227, 224);
 }
+
+.header_bottom_centre_bottom_centrer_listeDesTaches{
+    overflow: scroll;
+    height: 85%;
+    width: 100%;
+    background-color: rgb(111, 111, 10);
+}
+
+.stylePourLa_listeDesTaches{
+    transition: all 0.5s ease;
+    margin-top:10px;
+    height: 25%;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(227, 227, 224);
+}
+
+.divConteneurDinfo{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+.statueTache{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    background-color: rgb(249, 249, 7);
+}
+
+.statueTache_cercle{
+    border-radius: 100%;
+    border: none;
+    height: 50%;
+    width: 30%;
+    background-color: rgb(19, 70, 24);
+}
+
+.contenuDeTache{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(0, 84, 181);
+}
+
+.editerLaTache{
+    background: url("/src/img/icon/edit_file_26px.png") no-repeat;
+    background-size: auto;
+    background-position: center;
+    height: 100%;
+    width: 20%;
+    background-color: rgb(0, 157, 42);
+}
+
+.effacerLaTache{
+    background: url("/src/img/icon/edit_file_26px.png") no-repeat;
+    background-size: auto;
+    background-position: center;
+    height: 100%;
+    width: 10%;
+    background-color: rgb(230, 0, 0);
+}
+
+.fall {
+    transform: translateY(12rem) rotateZ(20deg);
+    opacity: 0;
+  }
+
+
+/* ___________ menu coter droit _______________ */
 
 .header_bottom_droit{
     display: flex;
