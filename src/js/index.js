@@ -30,8 +30,15 @@ function AjoutDesTache(event) {
   </div>
 
   <div class="contenuDeTache">
-  <h4>${zoneDeSaisie_tire.value}</h4>
-  <p>${zoneDeSaisieDescription.value}</p>
+
+     <div class="contenuDeTache_titreEtCategorie">
+     <h4>${zoneDeSaisie_tire.value}</h4>
+     <h4>${zoneDeSaisie_tire.value}</h4>
+     </div>
+
+     <div class="contenuDeTache_description">
+     <p>${zoneDeSaisieDescription.value}</p>
+     </div>
   </div>
 
   <div class="editerLaTache"></div>
@@ -46,6 +53,7 @@ function AjoutDesTache(event) {
   ZoneDajoutDesTache.appendChild(creationDuneDivPourAficherLesTaches);
   // clear todo input value
   zoneDeSaisieDescription.value = "";
+  zoneDeSaisie_tire.value = "" ;
 }
 
 function effacerLaTacheSElectioner(e) {
