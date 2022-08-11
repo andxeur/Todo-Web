@@ -2,6 +2,27 @@
 
 // Selecteur des Zone de Saisie
 
+const panel_user_menu = document.querySelector(
+  ".header_bottom_gauche_bottom_centre_menu"
+);
+const panel_user_menu_div_ul = document.querySelector(
+  ".header_bottom_gauche_bottom_centre_menu_div_ul"
+);
+
+const panel_user_menu_ul = document.querySelector(
+  ".header_bottom_gauche_bottom_centre_menu_ul"
+);
+
+const notifNbrDeTache = document.querySelector(".nav_notif_nbr_tache > span");
+
+const notif_panel = document.querySelector(".nav_notif_user_panel");
+
+const panel_user = document.querySelector(".header_bottom_gauche");
+const header_bottom_centre = document.querySelector(".header_bottom_centre");
+const header_bottom_droit = document.querySelector(".header_bottom_droit");
+
+const header_bottom = document.querySelector(".header_bottom");
+
 const zoneDeSaisie_tire = document.querySelector(
   ".header_bottom_centre_contain_menu_gauche_form_Titre"
 );
@@ -46,6 +67,54 @@ document.addEventListener("DOMContentLoaded", obtenirLesTachePresente);
 btn_ajoutDuneTache.addEventListener("click", controlZoneZaisie);
 ZoneDajoutDesTache.addEventListener("click", effacerLaTacheSElectioner);
 menuSelectionDeCategorie.addEventListener("click", afficherLesCategorie);
+
+panel_user_menu.addEventListener("click", () => {
+  panel_user_menu_div_ul.classList.toggle("afficheCategorie_filter");
+});
+
+panel_user_menu_ul.addEventListener("click", (parmt) => {
+  //obtien le li du ul sur le quel on a cliquer (parmt.target;)
+  const titre_categorie = parmt.target.innerHTML;
+
+  const lisDesEnfantZoneDajoutDesTache = Array.from(
+    ZoneDajoutDesTache.children
+  );
+
+  lisDesEnfantZoneDajoutDesTache.forEach((enfant) => {
+    switch (titre_categorie) {
+      case "tout":
+        enfant.style.display = "flex";
+        break;
+
+      case "terminer":
+        if (enfant.classList.contains("tache_completer")) {
+          enfant.style.display = "flex";
+        } else {
+          enfant.style.display = "none";
+        }
+        break;
+
+      case "inachever":
+        if (!enfant.classList.contains("tache_completer")) {
+          enfant.style.display = "flex";
+        } else {
+          enfant.style.display = "none";
+        }
+        break;
+
+        case "tout supprimer": 
+        localStorage.clear("tacheTodo");
+        // console.log(localStorage.getItem("tacheTodo"));
+        enfant.style.display = "none";
+        obtenirLesTachePresente();
+        // effacerLaTacheSElectioner();
+        break;
+        
+    }
+  });
+
+});
+
 menuSelectionDeCategorie_filter.addEventListener(
   "click",
   afficherLesCategorie_filter
@@ -66,7 +135,17 @@ sousMenu.addEventListener("click", (parmt) => {
   titreSousMenu.textContent = `${titre_categorie}`;
 });
 
+//responsive section header_bottom
+notif_panel.addEventListener("click", () => {
+  panel_user.classList.toggle("masquerElement");
+  header_bottom_centre.classList.toggle("demiLargeurElement");
+  header_bottom_droit.classList.toggle("demiLargeurElement");
+
+  header_bottom.style.width = "100%";
+});
+
 // ---------------------------tout les Functions---------------------------------------------
+
 function AjoutDesTache() {
   // creationDuneDiv div
   const creationDuneDivPourAficherLesTaches = document.createElement("div");
@@ -94,7 +173,7 @@ function AjoutDesTache() {
      </div>
   </div>
 
-  <div class="editerLaTache"></div>
+  <!-- <div class="editerLaTache"></div> -->
 
   <div class="effacerLaTache"></div>
   `;
@@ -103,6 +182,7 @@ function AjoutDesTache() {
   // sauvegarder DesTaches en Local
   sauvegardeLocalDesTaches(
     zoneDeSaisie_tire.value,
+    titreSousMenu.textContent,
     zoneDeSaisieDescription.value
   );
   // ajouter a la zone des tache
@@ -144,22 +224,19 @@ function effacerLaTacheSElectioner(e) {
   // check mark
   if (item.classList[0] === "statueTache_cercle") {
     item.classList.toggle("statue_tache_completer");
-    console.log(item_conteneurGlobale);
-    console.log(item);
-    console.log(e);
     const enveloppeurTotale = e.path[3];
     enveloppeurTotale.classList.toggle("tache_completer");
   }
 }
 
-function sauvegardeLocalDesTaches(titre, description) {
+function sauvegardeLocalDesTaches(titre, categorie, description) {
   // localStorage.clear();
   // console.log(localStorage.getItem("tacheTodo"));
 
   // verifie si des tache exists deja
   let listeDesTodo;
 
-  const arrayInfoTodo = { titre, description };
+  const arrayInfoTodo = { titre, categorie, description };
 
   if (localStorage.getItem("tacheTodo") === null) {
     listeDesTodo = [];
@@ -169,15 +246,24 @@ function sauvegardeLocalDesTaches(titre, description) {
 
   listeDesTodo.push(arrayInfoTodo);
   localStorage.setItem("tacheTodo", JSON.stringify(listeDesTodo));
+  // console.log(localStorage.getItem("tacheTodo"));
+
+  //actualise le nbr de tache presente
+  notifNbrDeTache.textContent = `${listeDesTodo.length}`;
 }
 
 function obtenirLesTachePresente() {
   let listeDesTacheEnregistrer;
+
   if (localStorage.getItem("tacheTodo") === null) {
     listeDesTacheEnregistrer = [];
   } else {
     listeDesTacheEnregistrer = JSON.parse(localStorage.getItem("tacheTodo"));
+    // console.log(localStorage.getItem("tacheTodo").length)
   }
+
+  //actualise le nbr de tache presente
+  notifNbrDeTache.textContent = `${listeDesTacheEnregistrer.length}`;
 
   listeDesTacheEnregistrer.forEach((infoOBjet) => {
     // creationDuneDiv div
@@ -185,6 +271,9 @@ function obtenirLesTachePresente() {
     creationDuneDivPourAficherLesTaches.classList.add(
       "stylePourLa_listeDesTaches"
     );
+
+    // <h4>${infoOBjet.titre}</h4>
+    // <p>${infoOBjet.description}</p>
 
     // create div
     const divConteneurDinfo = document.createElement("div");
@@ -198,7 +287,7 @@ function obtenirLesTachePresente() {
 
      <div class="contenuDeTache_titreEtCategorie">
      <h4>${infoOBjet.titre}</h4>
-     <h4>${infoOBjet.titre}</h4>
+     <h4>${infoOBjet.categorie}</h4>
      </div>
 
      <div class="contenuDeTache_description">
@@ -206,7 +295,7 @@ function obtenirLesTachePresente() {
      </div>
   </div>
 
-  <div class="editerLaTache"></div>
+  <!-- <div class="editerLaTache"></div> -->
 
   <div class="effacerLaTache"></div>
   `;
@@ -251,7 +340,9 @@ function filtrerLesTache() {
 function removeLocalTodos(todo) {
   let todos;
 
-  if (localStorage.getItem("todos") === null) {
+  // console.log(localStorage.getItem("tacheTodo"))
+
+  if (localStorage.getItem("tacheTodo") === null) {
     todos = [];
   } else {
     todos = JSON.parse(localStorage.getItem("tacheTodo"));
@@ -263,6 +354,9 @@ function removeLocalTodos(todo) {
   todos.splice(index, 1);
 
   localStorage.setItem("tacheTodo", JSON.stringify(todos));
+
+  //actualise le nbr de tache presente
+  notifNbrDeTache.textContent = `${todos.length}`;
 }
 
 function afficherLesCategorie() {

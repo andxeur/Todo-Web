@@ -1,0 +1,39 @@
+/* ___________ media query  _______________ */
+
+@media screen and (max-width: 890px) {
+
+
+}
+
+
+@media screen and (max-width: 815px) {
+    .header_bottom_gauche{
+      display: bock;
+      width: 20%;
+    }
+  
+    .header_bottom_centre {
+      width: 80%;
+    }
+  
+    .header_bottom_droit{
+        display: none;
+    }
+  
+    .nav_item ul li {
+      /* considere comme un seule mot */
+      white-space: nowrap;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .nav_logo_text p {
+        display: none;
+    }
+
+}
+
+
+  

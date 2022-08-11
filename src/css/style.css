@@ -5,7 +5,7 @@
   list-style: none;
 }
 
-:root{
+:root {
   --blanc: rgb(252, 252, 252);
   --rouge: #ff0000;
 }
@@ -28,16 +28,145 @@ input[type="search"] {
   padding-right: 15px;
 }
 
+input[type="submit"] {
+  cursor: pointer;
+}
+
 header {
-  height: 625px;
+  height: 100vh;
+  /* height: 625px; */
   /* background-color: aquamarine; */
 }
 
-nav {
-  height: 8%;
-  background-color: var(--red);
-  /* background-color: #2c2c2c; */
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-weight: bolder;
 }
+
+/* ________________________________________ navbar _______________________________ */
+
+nav {
+  display: flex;
+  height: 8%;
+  /* background-color: var(--red); */
+  background-color: #2c2c2c;
+}
+
+.nav_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 15%;
+  /* background-color: #0f781b; */
+}
+
+.nav_logo_containt {
+  display: flex;
+  height: 60%;
+  width: 80%;
+  /* background-color: #d3078b; */
+}
+
+.nav_logo_image {
+  background: url("/src/img/todo_list_48px.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 30%;
+  /* background-color: #b6ed01; */
+}
+
+.nav_logo_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+  /* background-color: #3d07d3; */
+}
+
+.nav_logo_text p {
+  white-space: nowrap; 
+  height: 80%;
+  width: 70%;
+  color: rgb(186, 186, 186);
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+  /* background-color: #e3e300; */
+}
+
+.nav_item ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #2600e3; */
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav_item ul li {
+  color: #f2f2f2;
+  margin-left: 60px;
+}
+
+.nav_item ul li:hover {
+  color: #c2c2c2;
+}
+
+.nav_notif {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  /* background-color: #0513b0; */
+}
+
+.nav_notif_nbr_tache {
+  cursor: pointer;
+  border-radius: 5px;
+  background: url("/src/img/icon/notification_24px.png") no-repeat;
+  background-size: 20px;
+  background-position: center;
+  margin-right: 20px;
+  width: 10%;
+  height: 50%;
+  background-color: #f2f2f2;
+}
+
+.nav_notif_nbr_tache span {
+  float: right;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100%;
+  font-size: 0.7rem;
+  font-weight: bolder;
+  width: 50%;
+  height: 65%;
+  background-color: #c31a00;
+}
+
+.nav_notif_user_panel {
+  cursor: pointer;
+  border-radius: 5px;
+  background: url("/src/img/icon/customer_50px.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 10%;
+  height: 50%;
+  background-color: #f2f2f2;
+  margin-right: 20px;
+}
+
+/* ________________________________________ conteneur de tout les coter _______________________________ */
 
 .header_bottom {
   display: flex;
@@ -45,7 +174,7 @@ nav {
   /* background-color: rgb(38, 31, 228); */
 }
 
-/* ___________ menu coter gauche _______________ */
+/* ________________________________________ menu coter gauche _______________________________ */
 
 .header_bottom_gauche {
   height: 100%;
@@ -53,7 +182,102 @@ nav {
   background-color: #f2f2f2;
 }
 
-/* ___________ menu coter centre _______________ */
+.header_bottom_gauche_top {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  /* background-color: #270ee6; */
+}
+
+.header_bottom_gauche_top_centre {
+  display: flex;
+  width: 80%;
+  height: 50%;
+  /* background-color: #2a8e2f; */
+}
+
+.header_bottom_gauche_top_centre_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  /* background-color: #f5e903; */
+}
+
+.header_bottom_gauche_top_centre_left_photo {
+  border-radius: 100%;
+  width: 70%;
+  height: 95%;
+  background: url("/src/img/woman_standing_with_penci.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #373737;
+}
+
+.header_bottom_gauche_top_centre_rigth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  /* background-color: #0fabb0; */
+}
+
+.header_bottom_gauche_top_centre_rigth_nom {
+  width: 100%;
+  height: 40%;
+  /* background-color: #12b00f; */
+}
+
+.header_bottom_gauche_top_centre_rigth_nom p {
+  width: 100%;
+  height: 100%;
+  /* background-color: #b01f0f; */
+}
+
+.header_bottom_gauche_bottom {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 80%;
+  /* background-color: #d52323; */
+}
+
+.header_bottom_gauche_bottom_centre {
+  height: 100%;
+  width: 90%;
+  /* background-color: #17a2c4; */
+}
+
+.header_bottom_gauche_bottom_centre_menu {
+  border-radius: 5px;
+  background-color: rgb(227, 227, 224);
+  text-align: center;
+  cursor: pointer;
+}
+
+.header_bottom_gauche_bottom_centre_menu p {
+  background-color: rgb(0, 243, 97);
+  border-radius: 5px;
+}
+
+.header_bottom_gauche_bottom_centre_menu_div_ul {
+  /* background-color: rgb(0, 243, 97); */
+  margin-top: 10px;
+  display: none;
+}
+
+.header_bottom_gauche_bottom_centre_menu_div_ul li {
+  margin-top: 10px;
+}
+
+.header_bottom_gauche_bottom_centre_menu_div_ul li:hover {
+  background-color: rgb(0, 243, 97);
+}
+
+/* ______________________________________ menu coter centre ____________________________________________ */
 
 .header_bottom_centre {
   height: 100%;
@@ -134,7 +358,7 @@ nav {
   background-color: #ffffff;
 }
 
-.header_bottom_centre_contain_menu_gauche_form_div .Categorie_selectioner{
+.header_bottom_centre_contain_menu_gauche_form_div .Categorie_selectioner {
   border-radius: 5px 5px 5px 5px;
   height: 100%;
   width: 100%;
@@ -144,12 +368,12 @@ nav {
   /* background-color: rgb(11, 158, 146); */
 }
 
-.Categorie_selectioner p{
+.Categorie_selectioner p {
   color: rgb(0, 0, 0);
   padding-left: 5px;
   height: 80%;
   width: 75%;
-  overflow:hidden;
+  overflow: hidden;
   /* background-color: rgb(31, 158, 11); */
 }
 
@@ -160,7 +384,7 @@ nav {
   background-color: rgb(205, 205, 205);
 }
 
-.Categorie_selectioner_icon{
+.Categorie_selectioner_icon {
   background: url("/src/img/icon/expand_arrow_26px.png") no-repeat;
   background-size: 15px;
   background-position: center;
@@ -169,7 +393,7 @@ nav {
   /* background-color: rgb(205, 205, 205); */
 }
 
-.Categorie_selectioner_liste{
+.Categorie_selectioner_liste {
   border-radius: 5px 5px 5px 5px;
   display: none;
   cursor: pointer;
@@ -181,27 +405,26 @@ nav {
   position: absolute;
 }
 
-.Categorie_selectioner_liste_header{
+.Categorie_selectioner_liste_header {
   height: 75%;
   width: 100%;
   overflow-y: auto;
 }
 
-.Categorie_selectioner_liste_header ul li:hover{
+.Categorie_selectioner_liste_header ul li:hover {
   background-color: rgb(0, 243, 97);
   color: #000000;
 }
 
-.Categorie_selectioner_liste_header ul li{
+.Categorie_selectioner_liste_header ul li {
   padding-left: 5px;
 }
 
-.afficheCategorie{
-  display:block;
-  
+.afficheCategorie {
+  display: block;
 }
 
-.Categorie_selectioner_liste_footer{
+.Categorie_selectioner_liste_footer {
   border-radius: 0px 0px 5px 5px;
   display: flex;
   justify-content: space-between;
@@ -210,15 +433,15 @@ nav {
   background-color: rgba(255, 255, 255, 0.953);
 }
 
-.Categorie_selectioner_liste_footer input{
+.Categorie_selectioner_liste_footer input {
   padding-left: 5px;
   width: 100%;
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
   /* background-color: rgb(31, 158, 11); */
 }
 
-.Categorie_selectioner_liste_footer_icon_add{
+.Categorie_selectioner_liste_footer_icon_add {
   border-radius: 0px 5px 5px 0px;
   background: url("/src/img/icon/plus_math_30px.png") no-repeat;
   background-size: 15px;
@@ -227,8 +450,6 @@ nav {
   height: 100%;
   background-color: rgb(205, 205, 205);
 }
-
-
 
 .header_bottom_centre_contain_menu_gauche_form form > input {
   /* background-color: rgb(255, 166, 0); */
@@ -311,25 +532,22 @@ nav {
   /* background-color: rgb(217, 232, 1); */
 }
 
-.header_bottom_centre_bottom_recherche_et_categorie{
-  display:flex;
-  margin-top:10px;
+.header_bottom_centre_bottom_recherche_et_categorie {
+  display: flex;
+  margin-top: 10px;
   height: 40%;
   width: 68%;
   justify-content: space-between;
   /* border-radius: 25px; */
   border: none;
   /* background-color: rgb(248, 80, 8); */
-
-
 }
 
-.header_bottom_centre_bottom_recherche_et_categorie input{
+.header_bottom_centre_bottom_recherche_et_categorie input {
   height: 100%;
   width: 50%;
   border: none;
   border-radius: 20px;
-  
 }
 
 .header_bottom_centre_bottom_centrer_listeDesTaches {
@@ -375,27 +593,26 @@ nav {
 .contenuDeTache {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
 
   height: 100%;
   width: 76%;
   /* background-color: rgb(0, 84, 181); */
 }
 
-.contenuDeTache_titreEtCategorie{
+.contenuDeTache_titreEtCategorie {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   /* background-color: rgb(57, 0, 181); */
   height: 35%;
   width: 100%;
 }
 
-.contenuDeTache_description{
+.contenuDeTache_description {
   /* background-color: rgb(226, 2, 188); */
   height: 80%;
   width: 100%;
   overflow-y: auto;
-  
 }
 
 .editerLaTache {
@@ -421,24 +638,30 @@ nav {
   opacity: 0;
 }
 
-/* ___________ menu coter droit _______________ */
+/* ______________________________________ menu coter droit _________________________________________ */
 
 .header_bottom_droit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   width: 30%;
   background-color: #373737;
 }
 
-.header_bottom_droit_centre {
-  margin-top: 70px;
-  text-align: center;
+.header_bottom_droit_containt {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  height: 92%;
+  width: 100%;
+  /* background-color: #ae0d0d; */
+}
+
+.header_bottom_droit_centre {
+  margin-top: 150px;
+  text-align: center;
+  /* align-items: center; */
   height: 60%;
   width: 80%;
-  /* background-color: #16a33c; */
+  /* background-color: #1672a3; */
 }
 
 .header_bottom_droit_centre_text {
@@ -452,10 +675,11 @@ nav {
 .header_bottom_droit_centre_text p {
   font-weight: bolder;
   margin-top: 10px;
+
 }
 
 .header_bottom_droit_centre_text input {
-  background-color: #16a33c;
+  background-color: rgb(0, 243, 97);
   border-radius: 5px;
   border: none;
   margin-top: 10px;
@@ -465,6 +689,7 @@ nav {
 }
 
 .header_bottom_droit_centre_image {
+  margin-top: 20px;
   height: 70%;
   width: 100%;
   /* background-color: #ffff09; */
@@ -473,10 +698,29 @@ nav {
   background-position: center;
 }
 
+.header_bottom_droit_bottom {
+  color: #373737;
+  font-size: 1em;
+  text-align: center;
+  height: 8%;
+  width: 100%;
+  background-color: rgb(227, 227, 224);
+}
 
-.choixCategorie{
+.footer_bas_copyright {
+  height: 50%;
+}
+
+.footer_bas_credits {
+  /* background-color: rgb(23, 208, 69); */
+  height: 50%;
+}
+
+/* _______________________________________ style pour js  _________________________________________ */
+
+.choixCategorie {
   position: absolute;
-  top:0;
+  top: 0;
   height: 130px;
   width: 150px;
   background-color: #ff0505;
@@ -485,14 +729,14 @@ nav {
 .tache_completer {
   border-radius: 5px;
   border: none;
-  background-color: rgb(53, 154, 97)
+  background-color: rgb(53, 154, 97);
 }
 
 .statue_tache_completer {
   background-color: rgb(0, 243, 97);
 }
 
-/* ___________ filter design  _______________ */
+/* ____________________________________________ filter design  ____________________________________ */
 .header_bottom_centre_contain_menu_gauche_form_div_filter {
   cursor: pointer;
   border-radius: 5px;
@@ -503,7 +747,8 @@ nav {
   background-color: #ffffff;
 }
 
-.header_bottom_centre_contain_menu_gauche_form_div_filter .Categorie_selectioner_filter{
+.header_bottom_centre_contain_menu_gauche_form_div_filter
+  .Categorie_selectioner_filter {
   border-radius: 5px 5px 5px 5px;
   height: 100%;
   width: 100%;
@@ -513,12 +758,12 @@ nav {
   /* background-color: rgb(11, 158, 146); */
 }
 
-.Categorie_selectioner_filter p{
+.Categorie_selectioner_filter p {
   color: rgb(0, 0, 0);
   padding-left: 5px;
   height: 80%;
   width: 75%;
-  overflow:hidden;
+  overflow: hidden;
   /* background-color: rgb(31, 158, 11); */
 }
 
@@ -529,7 +774,7 @@ nav {
   background-color: rgb(205, 205, 205);
 }
 
-.Categorie_selectioner_icon_filter{
+.Categorie_selectioner_icon_filter {
   background: url("/src/img/icon/expand_arrow_26px.png") no-repeat;
   background-size: 15px;
   background-position: center;
@@ -538,7 +783,7 @@ nav {
   /* background-color: rgb(205, 205, 205); */
 }
 
-.Categorie_selectioner_liste_filter{
+.Categorie_selectioner_liste_filter {
   border-radius: 5px 5px 5px 5px;
   display: none;
   cursor: pointer;
@@ -550,27 +795,26 @@ nav {
   position: absolute;
 }
 
-.Categorie_selectioner_liste_header_filter{
+.Categorie_selectioner_liste_header_filter {
   height: 75%;
   width: 100%;
   overflow-y: auto;
 }
 
-.Categorie_selectioner_liste_header_filter ul li:hover{
+.Categorie_selectioner_liste_header_filter ul li:hover {
   background-color: rgb(0, 243, 97);
   color: #000000;
 }
 
-.Categorie_selectioner_liste_header_filter ul li{
+.Categorie_selectioner_liste_header_filter ul li {
   padding-left: 5px;
 }
 
-.afficheCategorie_filter{
-  display:block;
-  
+.afficheCategorie_filter {
+  display: block;
 }
 
-.Categorie_selectioner_liste_footer_filter{
+.Categorie_selectioner_liste_footer_filter {
   border-radius: 0px 0px 5px 5px;
   display: flex;
   justify-content: space-between;
@@ -579,15 +823,15 @@ nav {
   background-color: rgba(255, 255, 255, 0.953);
 }
 
-.Categorie_selectioner_liste_footer_filter input{
+.Categorie_selectioner_liste_footer_filter input {
   padding-left: 5px;
   width: 100%;
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
   /* background-color: rgb(31, 158, 11); */
 }
 
-.Categorie_selectioner_liste_footer_icon_add_filter{
+.Categorie_selectioner_liste_footer_icon_add_filter {
   border-radius: 0px 5px 5px 0px;
   background: url("/src/img/icon/plus_math_30px.png") no-repeat;
   background-size: 15px;
@@ -599,11 +843,24 @@ nav {
 
 /* ___________ autre  _______________ */
 
-::-webkit-scrollbar{
+.masquerElement {
+  display: none;
+  /* background-color: rgb(147, 15, 15); */
+}
+
+.demiLargeurElement {
+  width: 50%;
+}
+
+/* ___________ autre  _______________ */
+
+::-webkit-scrollbar {
   width: 3.5px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 15px;
-  background: linear-gradient(to top, #373737,rgb(227, 227, 224) );
+  background: linear-gradient(to top, #373737, rgb(227, 227, 224));
 }
+
+

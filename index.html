@@ -3,17 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  dimention de la page /prend tout la largeur de lappareil /taille initial 100%  /interdi zoom                    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 " />
+    <link rel="shortcut icon" href="./src/img/todo_list_48px.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/sytle-mobile.css" />
     <script src="./src/js/index.js" defer></script>
     <title>Todo Web</title>
   </head>
 
   <body>
     <header>
-      <nav></nav>
+      <!---------------------- navbar------------------------>
+      <nav>
+        <div class="nav_logo">
+          <div class="nav_logo_containt">
+            <div class="nav_logo_image"></div>
+            <div class="nav_logo_text">
+              <p>Todo Web</p>
+            </div>
+          </div>
+        </div>
+        <div class="nav_item">
+          <ul class="nav_item_ul">
+            <li>Services</li>
+            <li>Galeries</li>
+            <li>A propos</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="nav_notif">
+          <div class="nav_notif_nbr_tache">
+            <span>0</span>
+          </div>
+          <div class="nav_notif_user_panel"></div>
+        </div>
+      </nav>
       <div class="header_bottom">
-        <div class="header_bottom_gauche"></div>
+        <!-------------- section coter gauche----------------->
+        <div class="header_bottom_gauche">
+          <div class="header_bottom_gauche_top">
+            <div class="header_bottom_gauche_top_centre">
+              <div class="header_bottom_gauche_top_centre_left">
+                <div class="header_bottom_gauche_top_centre_left_photo"></div>
+              </div>
+              <div class="header_bottom_gauche_top_centre_rigth">
+                <div class="header_bottom_gauche_top_centre_rigth_nom">
+                  <p>Mr.jone</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header_bottom_gauche_bottom">
+            <div class="header_bottom_gauche_bottom_centre">
+              <div class="header_bottom_gauche_bottom_centre_menu">
+                <p>Toute options</p>
+                <div class="header_bottom_gauche_bottom_centre_menu_div_ul">
+                  <ul class="header_bottom_gauche_bottom_centre_menu_ul">
+                    <li>tout</li>
+                    <li>terminer</li>
+                    <li>inachever</li>
+                    <li>tout supprimer</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------- section coter centre----------------->
         <div class="header_bottom_centre">
           <div class="header_bottom_centre_contain">
             <div class="header_bottom_centre_contain_menu">
@@ -122,7 +179,7 @@
                     </div>
                   </div>
                 </div>
-                <h5>LISTES DES TACHE EN COUR</h5>
+                <h5>LISTES DES TACHE EN COUR :</h5>
               </div>
               <div
                 class="header_bottom_centre_bottom_centrer_listeDesTaches"
@@ -130,14 +187,29 @@
             </div>
           </div>
         </div>
+        <!-------------- section coter droit----------------->
         <div class="header_bottom_droit">
-          <div class="header_bottom_droit_centre">
-            <div class="header_bottom_droit_centre_text">
-              <h3>aucune tache a modifier pour l'instant</h3>
-              <p>AJOUTER UNE TACHE +</p>
-              <input type="submit" value="Ajouter une tache +" />
+          <div class="header_bottom_droit_containt">
+            <div class="header_bottom_droit_centre">
+              <div class="header_bottom_droit_centre_text">
+                <h3>aucune tache a modifier pour l'instant</h3>
+                <p>AJOUTER UNE TACHE +</p>
+                <input type="submit" value="Ajouter une tache +" />
+              </div>
+              <div class="header_bottom_droit_centre_image"></div>
             </div>
-            <div class="header_bottom_droit_centre_image"></div>
+          </div>
+
+          <div class="header_bottom_droit_bottom">
+            <!-- tout droit reserver a Coding Zip -->
+            <div class="footer_bas_copyright">
+              <p>
+                © Copyright by <a href="">Coding Zip</a>. All Rights Reserved
+              </p>
+            </div>
+            <div class="footer_bas_credits">
+              developper par <a href="">Drex</a> : version demo 1.0 
+            </div>
           </div>
         </div>
       </div>
