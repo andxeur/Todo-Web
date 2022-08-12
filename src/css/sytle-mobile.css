@@ -1,39 +1,60 @@
 /* ___________ media query  _______________ */
 
 @media screen and (max-width: 890px) {
-
-
-}
-
-
-@media screen and (max-width: 815px) {
-    .header_bottom_gauche{
-      display: bock;
-      width: 20%;
-    }
-  
-    .header_bottom_centre {
-      width: 80%;
-    }
-  
-    .header_bottom_droit{
-        display: none;
-    }
-  
-    .nav_item ul li {
-      /* considere comme un seule mot */
-      white-space: nowrap;
+  .header_bottom_gauche {
+    display: none;
   }
 
+  .header_bottom_centre {
+    width: 90%;
+  }
+
+  .header_bottom_droit {
+    display: none;
+  }
+
+  .nav_item ul li {
+    /* considere comme un seule mot */
+    white-space: nowrap;
+  }
+
+  .nav_logo_text p {
+    display: none;
+  }
+
+  .nav_logo {
+    display: none;
+  }
+
+  .nav_notif {
+    justify-content: center;
+  }
+
+  .nav_notif div {
+    width: 20%;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .header_bottom_centre_bottom_recherche_et_categorie {
+    width: 100%;
+  }
+
+  .stylePourLa_listeDesTaches {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 815px) {
 }
 
 @media screen and (max-width: 750px) {
-
-    .nav_logo_text p {
-        display: none;
-    }
-
 }
 
-
-  
+@media screen and (max-width: 400px) {
+  .nav_item ul {
+    display: block;
+  }
+}

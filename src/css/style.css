@@ -70,12 +70,15 @@ nav {
 }
 
 .nav_logo_image {
-  background: url("/src/img/todo_list_48px.png") no-repeat;
-  background-size: contain;
-  background-position: center;
   height: 100%;
   width: 30%;
   /* background-color: #b6ed01; */
+}
+
+.nav_logo_image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .nav_logo_text {
@@ -88,7 +91,7 @@ nav {
 }
 
 .nav_logo_text p {
-  white-space: nowrap; 
+  white-space: nowrap;
   height: 80%;
   width: 70%;
   color: rgb(186, 186, 186);
@@ -131,15 +134,20 @@ nav {
 }
 
 .nav_notif_nbr_tache {
+  position: relative;
   cursor: pointer;
   border-radius: 5px;
-  background: url("/src/img/icon/notification_24px.png") no-repeat;
-  background-size: 20px;
-  background-position: center;
   margin-right: 20px;
   width: 10%;
   height: 50%;
   background-color: #f2f2f2;
+}
+
+.nav_notif_nbr_tache img {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .nav_notif_nbr_tache span {
@@ -149,21 +157,24 @@ nav {
   border-radius: 100%;
   font-size: 0.7rem;
   font-weight: bolder;
-  width: 50%;
-  height: 65%;
+  width: 40%;
+  height: 75%;
   background-color: #c31a00;
 }
 
 .nav_notif_user_panel {
   cursor: pointer;
   border-radius: 5px;
-  background: url("/src/img/icon/customer_50px.png") no-repeat;
-  background-size: contain;
-  background-position: center;
   width: 10%;
   height: 50%;
   background-color: #f2f2f2;
   margin-right: 20px;
+}
+
+.nav_notif_user_panel img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 /* ________________________________________ conteneur de tout les coter _______________________________ */
@@ -210,10 +221,13 @@ nav {
   border-radius: 100%;
   width: 70%;
   height: 95%;
-  background: url("/src/img/woman_standing_with_penci.png") no-repeat;
-  background-size: cover;
-  background-position: center;
   background-color: #373737;
+}
+
+.header_bottom_gauche_top_centre_left_photo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .header_bottom_gauche_top_centre_rigth {
@@ -385,12 +399,19 @@ nav {
 }
 
 .Categorie_selectioner_icon {
-  background: url("/src/img/icon/expand_arrow_26px.png") no-repeat;
+  /* background: url("/src/img/icon/expand_arrow_26px.png") no-repeat;
   background-size: 15px;
-  background-position: center;
+  background-position: center; */
   width: 100%;
   height: 100%;
   /* background-color: rgb(205, 205, 205); */
+}
+
+.Categorie_selectioner_icon img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 15%;
 }
 
 .Categorie_selectioner_liste {
@@ -479,12 +500,16 @@ nav {
 
 .header_bottom_centre_contain_menu_gauche_form2 .icon_add {
   border-radius: 5px 5px 5px 5px;
-  background: url("/src/img/icon/plus_math_30px.png") no-repeat;
-  background-size: 15px;
-  background-position: center;
   width: 10%;
   height: 100%;
   background-color: rgb(205, 205, 205);
+}
+
+.header_bottom_centre_contain_menu_gauche_form2 .icon_add img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 15%;
 }
 
 .header_bottom_centre_contain_menu_gauche_form2 input[type="submit"] {
@@ -495,13 +520,10 @@ nav {
 .header_bottom_centre_contain_menu_droite {
   height: 100%;
   width: 30%;
-  background-size: cover;
-  background-image: url("/src/img/woman_standing_with_penci.png");
-  /* background-color: rgb(8, 182, 43); */
-  background-position: center;
 }
 
 .header_bottom_centre_contain_menu_droite img {
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -625,11 +647,16 @@ nav {
 }
 
 .effacerLaTache {
-  background: url("/src/img/icon/delete_bin_24px.png") no-repeat;
-  background-size: auto;
-  background-position: center;
   height: 100%;
   width: 7%;
+  /* background-color: rgb(0, 61, 230); */
+}
+
+.effacerLaTache img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 15%;
   /* background-color: rgb(230, 0, 0); */
 }
 
@@ -675,7 +702,6 @@ nav {
 .header_bottom_droit_centre_text p {
   font-weight: bolder;
   margin-top: 10px;
-
 }
 
 .header_bottom_droit_centre_text input {
@@ -692,10 +718,12 @@ nav {
   margin-top: 20px;
   height: 70%;
   width: 100%;
-  /* background-color: #ffff09; */
-  background-size: cover;
-  background-image: url("/src/img/woman_sitting_with_tablet.png");
-  background-position: center;
+}
+
+.header_bottom_droit_centre_image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .header_bottom_droit_bottom {
@@ -775,12 +803,16 @@ nav {
 }
 
 .Categorie_selectioner_icon_filter {
-  background: url("/src/img/icon/expand_arrow_26px.png") no-repeat;
-  background-size: 15px;
-  background-position: center;
   width: 100%;
   height: 100%;
   /* background-color: rgb(205, 205, 205); */
+}
+
+.Categorie_selectioner_icon_filter img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
 }
 
 .Categorie_selectioner_liste_filter {
@@ -862,5 +894,3 @@ nav {
   border-radius: 15px;
   background: linear-gradient(to top, #373737, rgb(227, 227, 224));
 }
-
-

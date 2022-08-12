@@ -175,7 +175,9 @@ function AjoutDesTache() {
 
   <!-- <div class="editerLaTache"></div> -->
 
-  <div class="effacerLaTache"></div>
+  <div class="effacerLaTache">
+  <img src="/src/img/icon/delete_bin_24px.png" alt="" srcset="">
+  </div>
   `;
 
   creationDuneDivPourAficherLesTaches.appendChild(divConteneurDinfo);
@@ -203,10 +205,13 @@ function controlZoneZaisie(event) {
 }
 
 function effacerLaTacheSElectioner(e) {
-  const item = e.target;
+
+  const item = e.path[1];
+
+  const cercleTacheComplete = e.path[0];
 
   // recupere le parent qui les contien (class="stylePourLa_listeDesTaches")
-  const item_conteneurGlobale = e.path[2];
+  const item_conteneurGlobale = e.path[3];
 
   // delete todo
   if (item.classList[0] === "effacerLaTache") {
@@ -214,7 +219,6 @@ function effacerLaTacheSElectioner(e) {
     item_conteneurGlobale.classList.add("fall");
 
     removeLocalTodos(item_conteneurGlobale);
-    // removeLocalTodos(e);
 
     item_conteneurGlobale.addEventListener("transitionend", function () {
       item_conteneurGlobale.remove();
@@ -222,10 +226,9 @@ function effacerLaTacheSElectioner(e) {
   }
 
   // check mark
-  if (item.classList[0] === "statueTache_cercle") {
-    item.classList.toggle("statue_tache_completer");
-    const enveloppeurTotale = e.path[3];
-    enveloppeurTotale.classList.toggle("tache_completer");
+  if (cercleTacheComplete.classList[0] === "statueTache_cercle") {
+    cercleTacheComplete.classList.toggle("statue_tache_completer");
+    item_conteneurGlobale.classList.toggle("tache_completer");
   }
 }
 
@@ -297,7 +300,9 @@ function obtenirLesTachePresente() {
 
   <!-- <div class="editerLaTache"></div> -->
 
-  <div class="effacerLaTache"></div>
+  <div class="effacerLaTache">
+  <img src="/src/img/icon/delete_bin_24px.png" alt="" srcset="">
+  </div>
   `;
 
     creationDuneDivPourAficherLesTaches.appendChild(divConteneurDinfo);
