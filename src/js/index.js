@@ -176,7 +176,7 @@ function AjoutDesTache() {
   <!-- <div class="editerLaTache"></div> -->
 
   <div class="effacerLaTache">
-  <img src="/src/img/icon/delete_bin_24px.png" alt="" srcset="">
+  <img src="./src/img/icon/delete_bin_24px.png" alt="" srcset="">
   </div>
   `;
 
@@ -301,7 +301,7 @@ function obtenirLesTachePresente() {
   <!-- <div class="editerLaTache"></div> -->
 
   <div class="effacerLaTache">
-  <img src="/src/img/icon/delete_bin_24px.png" alt="" srcset="">
+  <img src="./src/img/icon/delete_bin_24px.png" alt="" srcset="">
   </div>
   `;
 

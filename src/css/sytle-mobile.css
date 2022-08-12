@@ -6,7 +6,7 @@
   }
 
   .header_bottom_centre {
-    width: 90%;
+    width: 100%;
   }
 
   .header_bottom_droit {
@@ -45,6 +45,15 @@
   .stylePourLa_listeDesTaches {
     width: 100%;
   }
+
+  .header_bottom_centre_contain_menu {
+    width: 95%;
+    /* background-color: red; */
+}
+
+.nav_item ul li {
+  margin-left: 10%;
+}
 }
 
 @media screen and (max-width: 815px) {
@@ -54,7 +63,4 @@
 }
 
 @media screen and (max-width: 400px) {
-  .nav_item ul {
-    display: block;
-  }
 }
